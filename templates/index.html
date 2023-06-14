@@ -17,8 +17,7 @@
     </br>
     </br>
     </br>
-    <!-- Ajout du GIF après le logo -->
-    <img src="{{ url_for('static', filename='img/rick-astley-never-gonna-give-you-up.gif') }}" alt="Rick Astley" style="position: absolute; top: 0; left: 120px;">
+   
 
     
     <p>Liste des pages disponibles</p>
@@ -64,7 +63,8 @@
             <td>Oui</td>
         </tr>
     </table>
-
+    <!-- Ajout du GIF  -->
+    <img src="{{ url_for('static', filename='img/rick-astley-never-gonna-give-you-up.gif') }}" alt="Rick Astley" style="position: absolute; top: 0; left: 120px;">
     <img src="{{ url_for('static', filename='img/licorne.jpg') }}" alt="paysage" class="img-thumbnail img-responsive center-block"/>
 
 {% endblock content %}
