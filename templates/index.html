@@ -13,13 +13,7 @@
     <h1 class="text-center">CapEveCorp QuiZ 2023</h1>
     <!-- Ajout du logo -->
     <img src="{{ url_for('static', filename='img/logo.jfif') }}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 100px;">
-    </br>
-    </br>
-    </br>
-    </br>
-   
-
-    
+      
     <p>Liste des pages disponibles</p>
     <a href="{{ url_for('quiz') }}" class="btn btn-primary">QUIZ</a>
     <table>
@@ -62,6 +56,8 @@
             <td>Affiche le formulaire pour créer un nouveau quiz. Crée un nouveau quiz à partir des informations du formulaire soumis.</td>
             <td>Oui</td>
         </tr>
+        </table>
+        <table>
         <tr>
             <td> <img src="{{ url_for('static', filename='img/rick-astley-never-gonna-give-you-up.gif') }}" alt="Rick Astley"> </td>
             <td> <img src="{{ url_for('static', filename='img/licorne.jpg') }}" alt="paysage" class="img-thumbnail img-responsive center-block"/> </td>
