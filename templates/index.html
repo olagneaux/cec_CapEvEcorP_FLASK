@@ -12,6 +12,9 @@
     <!-- Ajout du logo -->
     <img src="{{ url_for('static', filename='img/logo.jfif') }}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 100px;">
 
+    <!-- Ajout du GIF après le logo -->
+    <img src="{{ url_for('static', filename='img/rick-astley-never-gonna-give-you-up.gif') }}" alt="Rick Astley" style="position: absolute; top: 0; left: 120px;">
+
     <h1 class="text-center">Quiz</h1>
     <p>Liste des pages disponibles</p>
     <a href="{{ url_for('quiz') }}" class="btn btn-primary">QUIZ</a>
@@ -58,11 +61,5 @@
     </table>
 
     <img src="{{ url_for('static', filename='img/licorne.jpg') }}" alt="paysage" class="img-thumbnail img-responsive center-block"/>
-
-    <!-- Ajout de la vidéo -->
-    <video controls autoplay muted>
-        <source src="{{ url_for('static', filename='videos/yt5s.io-Rick Astley - Never Gonna Give You Up (Official Music Video)(720p).mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
 {% endblock content %}
