@@ -59,4 +59,10 @@
 
     <img src="{{ url_for('static', filename='img/licorne.jpg') }}" alt="paysage" class="img-thumbnail img-responsive center-block"/>
 
+    <!-- Ajout de la vidéo -->
+    <video controls autoplay muted>
+        <source src="{{ url_for('static', filename='videos/yt5s.io-Rick Astley - Never Gonna Give You Up (Official Music Video)(720p).mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
 {% endblock content %}
