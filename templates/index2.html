@@ -1,0 +1,61 @@
+<!-- On étend le template de base de Bootstrap -->
+{% extends "bootstrap/base.html" %}
+
+<!-- On définit les attributs de la balise html, ici on spécifie la langue du document -->
+{% block html_attribs %} lang="fr"{% endblock html_attribs %}
+
+<!-- On définit le titre de la page -->
+{% block title %}Index{% endblock title %}
+
+<!-- On définit le contenu principal de la page -->
+{% block content %}
+    <h1 class="text-center">Quiz</h1>
+    <p>Liste des pages disponibles</p>
+    <a href="{{ url_for('quiz') }}" class="btn btn-primary">QUIZ</a>
+    <table>
+        <tr>
+            <th>URL</th>
+            <th>Méthode HTTP</th>
+            <th>Description</th>
+            <th>Opérationnel</th>
+            <th>Commentaire</th>
+        </tr>
+        <tr>
+            <td><a href="http://localhost:5000/">http://localhost:5000/</a></td>
+            <td>GET</td>
+            <td>Affiche la page d'accueil. Requiert une connexion utilisateur pour y accéder.</td>
+            <td>oui</td>
+            <td></td>
+        </tr>
+        
+
+
+        <tr>
+            <td><a href="http://localhost:5000/getallutilisateurs">http://localhost:5000/getallutilisateurs</a></td>
+            <td>GET</td>
+            <td>Récupère toutes les informations des utilisateurs de la base de données.</td>
+            <td>Oui</td>
+        </tr>
+        <tr>
+            <td><a href="http://localhost:5000/htmlutilisateurs">http://localhost:5000/htmlutilisateurs</a></td>
+            <td>GET</td>
+            <td>Récupère toutes les informations des utilisateurs de la base de données et les affiche dans une page HTML.</td>
+            <td>Oui</td>
+        </tr>
+        <tr>
+            <td><a href="http://localhost:5000/quiz">http://localhost:5000/quiz</a></td>
+            <td>GET</td>
+            <td>Affiche tous les quiz de la base de données.</td>
+            <td>Oui</td>
+        </tr>
+        <tr>
+            <td><a href="http://localhost:5000/quiz_new">http://localhost:5000/quiz_new</a></td>
+            <td>POST</td>
+            <td>Affiche le formulaire pour créer un nouveau quiz. Crée un nouveau quiz à partir des informations du formulaire soumis.</td>
+            <td>Oui</td>
+        </tr>
+    </table>
+
+    <img src="{{ url_for('static', filename='img/licorne.jpg') }}" alt="paysage" class="img-thumbnail img-responsive center-block"/>
+
+{% endblock content %}
