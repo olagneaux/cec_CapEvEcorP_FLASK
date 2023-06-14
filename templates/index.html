@@ -10,12 +10,14 @@
 <!-- On définit le contenu principal de la page -->
 {% block content %}
 
-    <h1 class="text-center">CapEveCorp QuiZ 2023</h1>
+    <h1>CapEveCorp QuiZ 2023</h1>
     <!-- Ajout du logo -->
     <img src="{{ url_for('static', filename='img/logo.jfif') }}" alt="Logo" style="width: 50%; margin: 0 auto;">
     </br>
     </br>
-    <a href="{{ url_for('quiz') }}" class="btn btn-primary">QUIZ</a>
+    {% comment %} <a href="{{ url_for('quiz') }}" class="btn btn-primary">QUIZ</a> {% endcomment %}
+    
+    <h1>Pages principales de l'application asitis</h1>
     <table>
         <tr>
             <th>URL</th>
@@ -23,6 +25,12 @@
             <th>Description</th>
             <th>Opérationnel</th>
             <th>Commentaire</th>
+        </tr>
+        <tr>
+            <td><a href="http://localhost:5000/quiz/1">http://localhost:5000/quiz/1</a></td>
+            <td>GET</td>
+            <td>Exemple de quiz.</td>
+            <td>Oui</td>
         </tr>
         <tr>
             <td><a href="http://localhost:5000/">http://localhost:5000/</a></td>
@@ -38,6 +46,7 @@
             <td>Récupère toutes les informations des utilisateurs de la base de données.</td>
             <td>Oui</td>
         </tr>
+
         <tr>
             <td><a href="http://localhost:5000/htmlutilisateurs">http://localhost:5000/htmlutilisateurs</a></td>
             <td>GET</td>
