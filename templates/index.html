@@ -9,13 +9,18 @@
 
 <!-- On définit le contenu principal de la page -->
 {% block content %}
+
+    <h1 class="text-center">CapEveCorp QuiZ 2023</h1>
     <!-- Ajout du logo -->
     <img src="{{ url_for('static', filename='img/logo.jfif') }}" alt="Logo" style="position: absolute; top: 0; left: 0; width: 100px;">
-
+    </br>
+    </br>
+    </br>
+    </br>
     <!-- Ajout du GIF après le logo -->
     <img src="{{ url_for('static', filename='img/rick-astley-never-gonna-give-you-up.gif') }}" alt="Rick Astley" style="position: absolute; top: 0; left: 120px;">
 
-    <h1 class="text-center">Quiz</h1>
+    
     <p>Liste des pages disponibles</p>
     <a href="{{ url_for('quiz') }}" class="btn btn-primary">QUIZ</a>
     <table>
